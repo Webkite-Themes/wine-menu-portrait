@@ -205,16 +205,16 @@ $colorVariant:light;
   .webkite-item-details{
     @include boxedUp;
     position: fixed;
-    top: 0;
-    right:0;
     left:0;
+    right:0;
     max-width: 700px;
     padding: $mainGutter;
-    margin:auto;
     top:50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    margin-left:50%;
+    margin-right:-50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
     z-index: 999999;
     }
   .webkite-result-modal{
