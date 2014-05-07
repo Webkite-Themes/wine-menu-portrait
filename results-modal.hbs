@@ -62,17 +62,15 @@
           <div class="webkite-block-group webkite-prices until-md">
             <div class="webkite-block webkite-block-fifty webkite-glass">
               <span class="webkite-price">
-                {{~#facet name="Price Per Glass ($)"~}}${{currency displayValue}}{{~/facet~}}                
-                {{~#facet name="Price Per Glass"~}}{{currency displayValue}}{{~/facet~}}                
-                {{~#unless (find facets name="Price Per Glass ($)")~}}{{~#unless (find facets name="Price Per Glass")~}}-{{~/unless~}}{{~/unless~}}
+                {{~#facet name="Price Per Glass"~}}{{displayValue}}{{~/facet~}}                
+                {{~#unless (find facets name="Price Per Glass")~}}-{{~/unless~}}
                 <span class="webkite-price-label">/glass</span>
               </span>
             </div><!--
          --><div class="webkite-block webkite-block-fifty webkite-bottle">
               <span class="webkite-price">
-                {{~#facet name="Price Per Bottle ($)"~}}${{currency displayValue}}{{~/facet~}}                
-                {{~#facet name="Price Per Bottle"~}}{{currency displayValue}}{{~/facet~}}                
-                {{~#unless (find facets name="Price Per Bottle ($)")~}}{{~#unless (find facets name="Price Per Bottle")~}}-{{~/unless~}}{{~/unless~}}
+                {{~#facet name="Price Per Bottle"~}}{{displayValue}}{{~/facet~}}                
+                {{~#unless (find facets name="Price Per Bottle")~}}-{{~/unless~}}
                 <span class="webkite-price-label">/bottle</span>
               </span>
             </div>
@@ -84,17 +82,15 @@
         <div class="webkite-block-group webkite-prices">
           <div class="webkite-block webkite-block-fifty webkite-glass">
             <span class="webkite-price">
-              {{~#facet name="Price Per Glass ($)"~}}${{currency displayValue}}{{~/facet~}}                
-              {{~#facet name="Price Per Glass"~}}{{currency displayValue}}{{~/facet~}}                
-              {{~#unless (find facets name="Price Per Glass ($)")~}}{{~#unless (find facets name="Price Per Glass")~}}-{{~/unless~}}{{~/unless~}}
+              {{~#facet name="Price Per Glass"~}}{{displayValue}}{{~/facet~}}                
+              {{~#unless (find facets name="Price Per Glass")~}}-{{~/unless~}}
               <span class="webkite-price-label">/glass</span>
             </span>
           </div><!--
        --><div class="webkite-block webkite-block-fifty webkite-bottle">
             <span class="webkite-price">
-              {{~#facet name="Price Per Bottle ($)"~}}${{currency displayValue}}{{~/facet~}}                
-              {{~#facet name="Price Per Bottle"~}}{{currency displayValue}}{{~/facet~}}                
-              {{~#unless (find facets name="Price Per Bottle ($)")~}}{{~#unless (find facets name="Price Per Bottle")~}}-{{~/unless~}}{{~/unless~}}
+              {{~#facet name="Price Per Bottle"~}}{{displayValue}}{{~/facet~}}                
+              {{~#unless (find facets name="Price Per Bottle")~}}-{{~/unless~}}
               <span class="webkite-price-label">/bottle</span>
             </span>
           </div>
