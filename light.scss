@@ -120,9 +120,6 @@ $colorVariant:light;
   .webkite-headline {
     text-align:center;
     margin-bottom: $mainGutter/4;
-    .webkite-winery {
-      display:inline-block;
-      }
     .webkite-wine-name {
       display:inline-block;
       }
@@ -146,6 +143,8 @@ $colorVariant:light;
     }
   .webkite-providence {
     margin-top:$mainGutter/2.5;
+    color:$lightOpacity;
+    span {opacity:0.5;}
     &:empty {display:none;}
     a + a:before, 
     span + span:before, 
@@ -257,8 +256,11 @@ $colorVariant:light;
         z-index:1;
         }    
       + .webkite-result-body {
+        @include boxedUp;
+        background:none;
         display:inline-block;
         position:relative;
+        width:100%;
         }
       }
     .webkite-result-body{
@@ -283,6 +285,7 @@ $colorVariant:light;
       height:100%;
       display:table;
       margin-top:0;
+      width:100%;
       & > .webkite-block {
         display:table-cell;
         vertical-align:middle;
@@ -386,7 +389,6 @@ $colorVariant:light;
         }
       .webkite-price-label{
         font-size:0.75em;
-        text-transform: uppercase;
         display:inline;
         }
       }
@@ -432,7 +434,6 @@ $colorVariant:light;
         }
       .webkite-price-label{
         font-size:0.65em;
-        text-transform: uppercase;
         display:inline;
         }
       }
@@ -449,6 +450,9 @@ $colorVariant:light;
         padding-left:$imageWidthMd + $mainGutter;
         }
       }
+    .webkite-prices-wrap {padding-left:0;}
+    .webkite-prices {margin-left:0;}
+    .webkite-price-label { width:100%;}
     }
   }
 
