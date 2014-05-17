@@ -1,7 +1,17 @@
 $colorVariant:dark;
 
+@import url("//fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+
+$imageWidthSm: 150px;
+$imageWidthMd: 100px;
+$imageblockBackground: #000;
+$itemBackground: rgba(255,255,255,.1);
+
 //CALL UNIVERSALS
 @import 'universals';
+
+//override variables
+$lighterOpacity: rgba(255,255,255,.15);
 
 /* RESET */
 #webkite-results{

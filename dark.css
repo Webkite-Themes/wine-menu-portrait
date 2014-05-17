@@ -1,12 +1,12 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("//fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 /* RESET */
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
   #webkite-results div, #webkite-results span, #webkite-results applet, #webkite-results object, #webkite-results iframe, #webkite-results h1, #webkite-results h2, #webkite-results h3, #webkite-results h4, #webkite-results h5, #webkite-results h6, #webkite-results p, #webkite-results blockquote, #webkite-results pre, #webkite-results a, #webkite-results abbr, #webkite-results acronym, #webkite-results address, #webkite-results big, #webkite-results cite, #webkite-results code, #webkite-results del, #webkite-results dfn, #webkite-results em, #webkite-results img, #webkite-results ins, #webkite-results kbd, #webkite-results q, #webkite-results s, #webkite-results samp, #webkite-results small, #webkite-results strike, #webkite-results strong, #webkite-results sub, #webkite-results sup, #webkite-results tt, #webkite-results var, #webkite-results b, #webkite-results u, #webkite-results i, #webkite-results center, #webkite-results dl, #webkite-results dt, #webkite-results dd, #webkite-results ol, #webkite-results ul, #webkite-results li, #webkite-results fieldset, #webkite-results form, #webkite-results label, #webkite-results legend, #webkite-results table, #webkite-results caption, #webkite-results tbody, #webkite-results tfoot, #webkite-results thead, #webkite-results tr, #webkite-results th, #webkite-results td, #webkite-results article, #webkite-results aside, #webkite-results canvas, #webkite-results details, #webkite-results embed, #webkite-results figure, #webkite-results figcaption, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results output, #webkite-results ruby, #webkite-results section, #webkite-results summary, #webkite-results time, #webkite-results mark, #webkite-results audio, #webkite-results video {
-    box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    box-shadow: none;
     word-wrap: normal;
     -webkit-hyphens: manual;
     -moz-hyphens: manual;
@@ -22,9 +22,9 @@
   #webkite-results button, #webkite-results select, #webkite-results input {
     text-transform: none; }
     #webkite-results button:active, #webkite-results select:active, #webkite-results input:active {
-      box-shadow: none;
       -moz-box-shadow: none;
-      -webkit-box-shadow: none; }
+      -webkit-box-shadow: none;
+      box-shadow: none; }
   #webkite-results button::-moz-focus-inner {
     padding: 0;
     border: 0; }
@@ -89,10 +89,6 @@
 #webkite-results .webkite-results-header, #webkite-results .webkite-results-footer {
   text-align: justify;
   position: relative; }
-  #webkite-results .webkite-results-header::after, #webkite-results .webkite-results-footer::after {
-    content: '';
-    display: table;
-    clear: both; }
   #webkite-results .webkite-results-header .webkite-title-area, #webkite-results .webkite-results-header .webkite-sort-area, #webkite-results .webkite-results-header .webkite-filter-area, #webkite-results .webkite-results-header .webkite-branding-area, #webkite-results .webkite-results-header .webkite-pagination-area, #webkite-results .webkite-results-footer .webkite-title-area, #webkite-results .webkite-results-footer .webkite-sort-area, #webkite-results .webkite-results-footer .webkite-filter-area, #webkite-results .webkite-results-footer .webkite-branding-area, #webkite-results .webkite-results-footer .webkite-pagination-area {
     display: inline-block;
     vertical-align: top; }
@@ -104,11 +100,21 @@
 #webkite-results .webkite-results-header {
   line-height: 1;
   margin-bottom: 20px; }
+  #webkite-results .webkite-results-header::after {
+    content: '';
+    clear: both;
+    display: table; }
 #webkite-results .webkite-results-footer {
   height: 45px; }
   #webkite-results .webkite-results-footer::after {
+    content: '';
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+    margin-bottom: 20px; }
 
 /************************************************* SORTS */
 #webkite-results .webkite-sort-area > .webkite-toggle {
@@ -128,17 +134,18 @@
   font: 700 14px/1.3 'Open Sans', 'Arial', sans-serif;
   margin: 0;
   outline: none;
-  padding: 3px 8px 3px 10px;
+  padding: 3px 8px 3px 8px;
   height: 28px;
   text-align: left; }
   #webkite-results .webkite-sort-area > .webkite-toggle i {
     background: url("angle-dark.png") center center no-repeat;
     display: inline-block;
     height: 10px;
-    margin-left: 8px;
+    margin-left: 10px;
     pointer-events: none;
     width: 10px; }
 #webkite-results .webkite-sort-area {
+  width: 68px;
   position: relative;
   z-index: 3; }
 
@@ -204,8 +211,8 @@
     width: 100%;
     position: relative; }
   #webkite-results .webkite-sort-area + .webkite-filter-area {
-    padding-left: 82px;
-    margin-left: -69px; }
+    padding-left: 78px;
+    margin-left: -68px; }
   #webkite-results .webkite-applied-filters {
     position: relative; }
   #webkite-results .current-filters {
@@ -469,6 +476,8 @@
   #webkite-results .webkite-page-input::-webkit-outer-spin-button, #webkite-results .webkite-page-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+  #webkite-results input[type=number] {
+    -moz-appearance: textfield; }
 
 /********************************************** BLOCKS */
 #webkite-results .webkite-block-group {

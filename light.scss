@@ -1,5 +1,12 @@
 $colorVariant:light;
 
+@import url("//fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+
+$imageWidthSm: 150px;
+$imageWidthMd: 100px;
+$imageblockBackground: #fff;
+$itemBackground: rgba(255,255,255,.5);
+
 //CALL UNIVERSALS
 @import 'universals';
 
