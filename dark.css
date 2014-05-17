@@ -613,7 +613,8 @@
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 0.86em;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
+  line-height: 1.2;
   text-align: center;
   width: 100%;
   color: rgba(255, 255, 255, 0.7); }
@@ -880,7 +881,8 @@
 #webkite-results.md .webkite-modal-content .webkite-prices {
   margin-left: 0; }
 #webkite-results.md .webkite-modal-content .webkite-price-label {
-  width: 100%; }
+  width: 100%;
+  display: block; }
 
 /*************************** DISPLAY RULES */
 #webkite-results.xs .md-only {

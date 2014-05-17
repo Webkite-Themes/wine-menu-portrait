@@ -177,7 +177,8 @@ $lighterOpacity: rgba(255,255,255,.15);
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size:0.86em;
     text-transform: uppercase;
-    display:inline-block;
+    display:block;
+    line-height:1.2;
     text-align:center;
     width:100%;
     color: $lightOpacity;
@@ -464,7 +465,7 @@ $lighterOpacity: rgba(255,255,255,.15);
       }
     .webkite-prices-wrap {padding-left:0;}
     .webkite-prices {margin-left:0;}
-    .webkite-price-label { width:100%;}
+    .webkite-price-label { width:100%; display:block;}
     }
   }
 
