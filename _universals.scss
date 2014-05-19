@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
 //*******************************************************SIZES
 $mainGutter: 20px;
@@ -196,10 +196,11 @@ $tokenFifth: #6f7ca8;
         }
       .webkite-branding-area a {
         @if $colorVariant == light{background: url("branding-light.svg") center top no-repeat;}
-        @if $colorVariant == dark{background: url("branding-dark.svg") center top no-repeat;} 
+        @if $colorVariant == dark{background: url("branding-dark.svg") center top no-repeat;}
+        background-size:100%;
         display: inline-block;
-        height: 45px;
-        width: 136px;
+        height: 2.813em;
+        width: 8.5em;
         }
       }
     .webkite-results-header{
@@ -209,7 +210,7 @@ $tokenFifth: #6f7ca8;
       }
     .webkite-results-footer{
       @include breakThat;
-      height: 45px;
+      height: 2.813em;
       }
       
     }
@@ -324,7 +325,7 @@ $tokenFifth: #6f7ca8;
       border: 1px solid $lighterOpacity;
       display: inline-block;
       height: 28px;
-      padding: 5px 25px 5px 73px;
+      padding: 5px 25px 5px 72px;
       position: relative;
       width: 100%;
       text-align: left;
@@ -350,14 +351,16 @@ $tokenFifth: #6f7ca8;
       left: 0;
       @include boxedUp;
       @include roundedUp(3px 0 0 3px);
-      border: none;
-      border-right: 1px solid $lighterOpacity;
+      border: 1px solid $lightestOpacity;
+      border-right-color: $lighterOpacity;
       @if $colorVariant == dark{border: 1px solid $lighterOpacity;} 
       @if $colorVariant == light{background-clip: padding-box;} 
       color: $lightOpacity;
       font: 700 14px/1 'Open Sans', 'Arial', sans-serif;
-      padding: 0 0.625em;
+      padding: 0 $mainGutter/2.5;
       height: 28px;
+      width:73px;
+      white-space:nowrap;
       text-align:left;
       i{
         @if $colorVariant == light{background: url("plus-light.png") no-repeat;} 
@@ -500,7 +503,7 @@ $tokenFifth: #6f7ca8;
       @include gradiateHorizontal;
       height: auto; width: 1.5em;
       position: absolute;
-      left: 72px;
+      left: 71px;
       top:-1px;
       bottom:-1px;
       }
@@ -514,7 +517,7 @@ $tokenFifth: #6f7ca8;
       position: absolute;
       top:-1px;
       right:-1px;
-      left:72px;
+      left:71px;
       z-index: 3;
       .all-filters-wrapper{
         white-space: normal;
@@ -564,8 +567,8 @@ $tokenFifth: #6f7ca8;
       margin: 0;
       }
     input[type=number] {
-		  -moz-appearance:textfield;
-		  }
+      -moz-appearance:textfield;
+      }
       
     }
   

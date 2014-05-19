@@ -1,5 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 /* RESET */
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
@@ -94,9 +94,10 @@
     vertical-align: top; }
   #webkite-results .webkite-results-header .webkite-branding-area a, #webkite-results .webkite-results-footer .webkite-branding-area a {
     background: url("branding-light.svg") center top no-repeat;
+    background-size: 100%;
     display: inline-block;
-    height: 45px;
-    width: 136px; }
+    height: 2.813em;
+    width: 8.5em; }
 #webkite-results .webkite-results-header {
   line-height: 1;
   margin-bottom: 20px; }
@@ -105,7 +106,7 @@
     clear: both;
     display: table; }
 #webkite-results .webkite-results-footer {
-  height: 45px; }
+  height: 2.813em; }
   #webkite-results .webkite-results-footer::after {
     content: '';
     display: inline-block;
@@ -228,7 +229,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: inline-block;
     height: 28px;
-    padding: 5px 25px 5px 73px;
+    padding: 5px 25px 5px 72px;
     position: relative;
     width: 100%;
     text-align: left;
@@ -256,13 +257,15 @@
     -ms-border-radius: 3px 0 0 3px;
     -o-border-radius: 3px 0 0 3px;
     border-radius: 3px 0 0 3px;
-    border: none;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-right-color: rgba(0, 0, 0, 0.1);
     background-clip: padding-box;
     color: rgba(0, 0, 0, 0.6);
     font: 700 14px/1 'Open Sans', 'Arial', sans-serif;
-    padding: 0 0.625em;
+    padding: 0 8px;
     height: 28px;
+    width: 73px;
+    white-space: nowrap;
     text-align: left; }
     #webkite-results .webkite-applied-filters > .webkite-toggle i {
       background: url("plus-light.png") no-repeat;
@@ -403,7 +406,7 @@
   height: auto;
   width: 1.5em;
   position: absolute;
-  left: 72px;
+  left: 71px;
   top: -1px;
   bottom: -1px; }
 #webkite-results .all-current-filters {
@@ -422,7 +425,7 @@
   position: absolute;
   top: -1px;
   right: -1px;
-  left: 72px;
+  left: 71px;
   z-index: 3; }
   #webkite-results .all-current-filters .all-filters-wrapper {
     white-space: normal; }
