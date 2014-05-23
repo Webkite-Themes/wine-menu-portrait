@@ -227,10 +227,11 @@ $itemBackground: rgba(255,255,255,.5);
   .webkite-result-modal{
     @include boxedUp;
     @include roundedUp (10px);
-    -moz-box-shadow:0 3px 7px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.2);
-    -webkit-box-shadow:0 3px 7px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.2);
-    box-shadow:0 3px 7px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 3px 7px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 3px 7px rgba(0,0,0,0.2);
+    box-shadow:0 3px 7px rgba(0,0,0,0.2);
     background: $backgroundColor;
+    border:1px solid rgba(0, 0, 0, 0.15);
     padding: $mainGutter $mainGutter/5*2 $mainGutter*2 $mainGutter/4*3;
     position:relative;
     overflow:hidden;
