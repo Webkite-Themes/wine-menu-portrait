@@ -18,7 +18,8 @@
     font-size: 100%;
     font: inherit;
     text-transform: none;
-    vertical-align: baseline; }
+    vertical-align: baseline;
+    text-rendering: auto; }
   #webkite-results button, #webkite-results select, #webkite-results input {
     text-transform: none; }
     #webkite-results button:active, #webkite-results select:active, #webkite-results input:active {
@@ -393,7 +394,7 @@
   display: block; }
 
 /******************************* FILTER OVERVIEW AND SHADE */
-#webkite-results .webkite-truncated:before {
+#webkite-results .filter-token-wrapper.webkite-truncated:before {
   content: "";
   background: url("gradient-fallback-dark.png") repeat-y;
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 5%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 100%);
@@ -481,6 +482,41 @@
     margin: 0; }
   #webkite-results input[type=number] {
     -moz-appearance: textfield; }
+
+/************************************** ELEMENT QUERIES */
+#webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
+  width: 100%;
+  padding-right: 0;
+  text-align: center; }
+#webkite-results.xs .webkite-filter-area, #webkite-results.xs .webkite-sort-area, #webkite-results.xs .webkite-sort-area > .webkite-toggle {
+  width: 100%; }
+#webkite-results.xs .webkite-sort-area > .webkite-toggle i {
+  float: right;
+  margin-top: 5px; }
+#webkite-results.xs .sort-menu {
+  width: 95%; }
+#webkite-results.xs .webkite-sort-area + .webkite-filter-area {
+  margin-top: 20px; }
+#webkite-results.xs .webkite-filter-area, #webkite-results.xs .webkite-sort-area + .webkite-filter-area {
+  margin-left: 0;
+  padding-left: 0; }
+#webkite-results.xs .webkite-branding-area {
+  padding-bottom: 20px; }
+#webkite-results.xs .webkite-results-footer {
+  height: 110px; }
+
+#webkite-results.sm .webkite-filter-area, #webkite-results.sm .webkite-sort-area, #webkite-results.sm .webkite-sort-area > .webkite-toggle {
+  width: 100%; }
+#webkite-results.sm .webkite-sort-area > .webkite-toggle i {
+  float: right;
+  margin-top: 5px; }
+#webkite-results.sm .sort-menu {
+  width: 95%; }
+#webkite-results.sm .webkite-sort-area + .webkite-filter-area {
+  margin-top: 20px; }
+#webkite-results.sm .webkite-filter-area, #webkite-results.sm .webkite-sort-area + .webkite-filter-area {
+  margin-left: 0;
+  padding-left: 0; }
 
 /********************************************** BLOCKS */
 #webkite-results .webkite-block-group {
@@ -787,23 +823,6 @@
   border-bottom: 1px dotted rgba(255, 255, 255, 0.15); }
 
 /************************************** ELEMENT QUERIES */
-#webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
-  width: 100%;
-  padding-right: 0; }
-#webkite-results.xs .webkite-filter-area, #webkite-results.xs .webkite-sort-area, #webkite-results.xs .webkite-sort-area > .webkite-toggle {
-  width: 100%; }
-#webkite-results.xs .webkite-sort-area > .webkite-toggle i {
-  float: right;
-  margin-top: 5px; }
-#webkite-results.xs .sort-menu {
-  width: 95%; }
-#webkite-results.xs .webkite-sort-area + .webkite-filter-area {
-  margin-top: 20px; }
-#webkite-results.xs .webkite-filter-area {
-  margin-left: 0;
-  padding-left: 0; }
-#webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
-  text-align: center; }
 #webkite-results.xs .webkite-result-wrapper {
   width: 100%; }
 #webkite-results.xs .webkite-block.webkite-block-seventy {
@@ -834,23 +853,7 @@
   #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-price-label {
     font-size: 0.75em;
     display: inline; }
-#webkite-results.xs .webkite-branding-area {
-  padding-bottom: 20px; }
-#webkite-results.xs .webkite-results-footer {
-  height: 110px; }
 
-#webkite-results.sm .webkite-filter-area, #webkite-results.sm .webkite-sort-area, #webkite-results.sm .webkite-sort-area > .webkite-toggle {
-  width: 100%; }
-#webkite-results.sm .webkite-sort-area > .webkite-toggle i {
-  float: right;
-  margin-top: 5px; }
-#webkite-results.sm .sort-menu {
-  width: 95%; }
-#webkite-results.sm .webkite-sort-area + .webkite-filter-area {
-  margin-top: 20px; }
-#webkite-results.sm .webkite-filter-area {
-  margin-left: 0;
-  padding-left: 0; }
 #webkite-results.sm .webkite-block.webkite-block-seventy {
   width: 100%; }
 #webkite-results.sm .webkite-result-wrapper {
