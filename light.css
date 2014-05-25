@@ -648,6 +648,12 @@
   width: 100%;
   text-align: center;
   color: rgba(0, 0, 0, 0.7); }
+#webkite-results .webkite-price-value {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 #webkite-results .webkite-price-label {
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 0.86em;
@@ -773,6 +779,7 @@
   #webkite-results .webkite-modal-content .webkite-prices {
     height: 100%;
     display: table;
+    table-layout: fixed;
     margin-top: 0;
     width: 100%; }
     #webkite-results .webkite-modal-content .webkite-prices > .webkite-block {
