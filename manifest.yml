@@ -22,3 +22,9 @@ partials:
   - filters.handlebars.js
   - sorts.handlebars.js
   - results-modal.handlebars.js
+  
+pagination:
+  - 12
+  - 24
+  - 48
+  - 96
