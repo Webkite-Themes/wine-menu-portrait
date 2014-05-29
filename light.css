@@ -788,8 +788,7 @@
       text-align: center; }
   #webkite-results .webkite-modal-content .webkite-price {
     display: inline-block;
-    font-size: 1.3em;
-    line-height: 0.85em; }
+    font-size: 1.3em; }
   #webkite-results .webkite-modal-content .webkite-price-label {
     font-size: 0.65em;
     text-transform: uppercase;
@@ -847,19 +846,23 @@
     #webkite-results.xs .webkite-modal-content .webkite-image-wrapper img {
       width: 100%; }
   #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-prices {
-    margin-top: 8px; }
+    margin-top: 5px; }
     #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-prices > .webkite-block {
       width: 50%;
       display: inline-block;
-      vertical-align: top;
       text-align: left; }
   #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-price {
     display: inline;
     font-size: 1.1em;
-    line-height: 0.85em; }
+    text-align: left; }
+  #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-price-value {
+    vertical-align: bottom; }
   #webkite-results.xs .webkite-modal-content .webkite-result-body .webkite-price-label {
-    font-size: 0.75em;
-    display: inline; }
+    font-size: 11px;
+    display: inline-block;
+    width: auto;
+    overflow: hidden;
+    vertical-align: bottom; }
 
 #webkite-results.sm .webkite-block.webkite-block-seventy {
   width: 100%; }
@@ -871,7 +874,7 @@
   #webkite-results.sm .webkite-modal-content .webkite-image-wrapper + .webkite-result-body {
     padding-left: 170px; }
 #webkite-results.sm .webkite-modal-content .webkite-result-body .webkite-prices {
-  margin-top: 8px; }
+  margin-top: 5px; }
   #webkite-results.sm .webkite-modal-content .webkite-result-body .webkite-prices > .webkite-block {
     display: inline-block;
     vertical-align: top;
@@ -879,10 +882,15 @@
 #webkite-results.sm .webkite-modal-content .webkite-result-body .webkite-price {
   display: inline;
   font-size: 1.3em;
-  line-height: 0.85em; }
+  text-align: left; }
+#webkite-results.sm .webkite-modal-content .webkite-result-body .webkite-price-value {
+  vertical-align: bottom; }
 #webkite-results.sm .webkite-modal-content .webkite-result-body .webkite-price-label {
-  font-size: 0.65em;
-  display: inline; }
+  font-size: 12px;
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+  vertical-align: bottom; }
 
 #webkite-results.md .webkite-modal-content .webkite-image-wrapper {
   width: 100px;
@@ -895,7 +903,8 @@
   margin-left: 0; }
 #webkite-results.md .webkite-modal-content .webkite-price-label {
   width: 100%;
-  display: block; }
+  display: block;
+  margin-top: -2px; }
 
 /*************************** DISPLAY RULES */
 #webkite-results.xs .md-only {

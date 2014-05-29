@@ -312,7 +312,6 @@ $itemBackground: rgba(255,255,255,.5);
     .webkite-price{
       display: inline-block;
       font-size:1.3em;
-      line-height:0.85em;
       }
     .webkite-price-label{
       font-size:0.65em;
@@ -375,22 +374,27 @@ $itemBackground: rgba(255,255,255,.5);
       }
     .webkite-result-body{
       .webkite-prices {
-        margin-top:$mainGutter/2.5;
+        margin-top:$mainGutter/4;
         & > .webkite-block {
           width:50%;
           display:inline-block;
-          vertical-align:top;
           text-align:left;
           }
         }
       .webkite-price{
         display: inline;
         font-size:1.1em;
-        line-height:0.85em;
+        text-align:left;
+        }
+      .webkite-price-value {
+        vertical-align:bottom;
         }
       .webkite-price-label{
-        font-size:0.75em;
-        display:inline;
+        font-size:11px;
+        display:inline-block;
+        width:auto;
+        overflow:hidden;
+        vertical-align:bottom;
         }
       }
     }
@@ -408,7 +412,7 @@ $itemBackground: rgba(255,255,255,.5);
       }
     .webkite-result-body{
       .webkite-prices {
-        margin-top:$mainGutter/2.5;
+        margin-top:$mainGutter/4;
         & > .webkite-block {
           display:inline-block;
           vertical-align:top;
@@ -418,11 +422,17 @@ $itemBackground: rgba(255,255,255,.5);
       .webkite-price{
         display: inline;
         font-size:1.3em;
-        line-height:0.85em;
+        text-align:left;
+        }
+      .webkite-price-value {
+        vertical-align:bottom;        
         }
       .webkite-price-label{
-        font-size:0.65em;
-        display:inline;
+        font-size:12px;
+        display:inline-block;
+        width:auto;
+        overflow:hidden;
+        vertical-align:bottom;
         }
       }
     }
@@ -440,7 +450,7 @@ $itemBackground: rgba(255,255,255,.5);
       }
     .webkite-prices-wrap {padding-left:0;}
     .webkite-prices {margin-left:0;}
-    .webkite-price-label { width:100%; display:block;}
+    .webkite-price-label { width:100%; display:block; margin-top:-2px;}
     }
   }
 
