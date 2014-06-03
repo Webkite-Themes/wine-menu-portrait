@@ -230,6 +230,13 @@ $itemBackground: rgba(255,255,255,.5);
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     z-index: 999999;
+    -ms-transform: none\9;
+    width:700px\9;
+    max-width:700px\9;
+    top:0\9;
+    left:50%\9;
+    margin-left:-350px\9;
+    margin-right:0\9;
     }
   .webkite-result-modal{
     @include boxedUp;
@@ -362,6 +369,12 @@ $itemBackground: rgba(255,255,255,.5);
   .webkite-result-wrapper {width:100%;}
 
   .webkite-block.webkite-block-seventy {width:100%;}
+  .webkite-item-details {
+    width:100%\9;
+    max-width:100%\9;
+    margin:0\9;
+    left:0\9;
+    }
   .webkite-result-modal {padding-left:$mainGutter/4; padding-right:$mainGutter/4; padding-top:$mainGutter/2;}
   .webkite-modal-content {
     padding-right:$mainGutter/4;
@@ -403,7 +416,12 @@ $itemBackground: rgba(255,255,255,.5);
 #webkite-results.sm{
   .webkite-block.webkite-block-seventy {width:100%;}
   .webkite-result-wrapper {width:50%;}
-  
+  .webkite-item-details{
+    width:100%\9;
+    max-width:100%\9;
+    margin:0\9;
+    left:0\9;
+    }
   .webkite-modal-content {
     .webkite-image-wrapper{
       width: $imageWidthSm;
