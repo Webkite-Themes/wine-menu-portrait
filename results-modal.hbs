@@ -4,22 +4,25 @@
       <div class="webkite-block webkite-block-seventy">
         {{#facet name="Image URL"}}<div class="webkite-image-wrapper"><img src="{{displayValue}}"/></div>{{/facet~}}
         <div class="webkite-result-body">
-          <div class="webkite-subheadline">
-            {{~#facet name="Vintage"}}<span class="webkite-vintage">{{displayValue}}</span>{{/facet}}
-            {{~#facet name="Varietal"~}}
-              <span class="webkite-varietal">
-                {{~#if filterable}}
-                  {{~#each values~}}
-                    <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
-                    {{~#unless @last}}/{{/unless~}}
-                  {{~/each}}
-                {{~else}}
-                  {{~#each values}}{{this}}{{#unless @last}}/{{/unless}}{{/each}}
-                {{~/if~}}
-              </span>
-            {{~/facet~}}
-          </div>
+          {{#any (find facets name="Vintage") (find facets name="Varietal")}}
+            <div class="webkite-subheadline">
+              {{~#facet name="Vintage"}}<span class="webkite-vintage">{{displayValue}}</span>{{/facet}}
+              {{~#facet name="Varietal"~}}
+                <span class="webkite-varietal">
+                  {{~#if filterable}}
+                    {{~#each values~}}
+                      <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                      {{~#unless @last}}/{{/unless~}}
+                    {{~/each}}
+                  {{~else}}
+                    {{~#each values}}{{this}}{{#unless @last}}/{{/unless}}{{/each}}
+                  {{~/if~}}
+                </span>
+              {{~/facet~}}
+            </div>
+          {{/any}}
           
+          {{#any (find facets name="Winery") (find facets name="Wine Name")}}
           <h2 class="webkite-headline">
             {{~#facet name="Winery"}}
               {{~#if filterable~}}
@@ -30,34 +33,37 @@
             {{~/facet}}
             {{#facet name="Wine Name"}}<span class="webkite-wine-name">{{displayValue}}</span>{{/facet~}}
           </h2>
+          {{/any}}
           
           {{#facet name="Tasting Notes"~}}<p>{{displayValue}}</p>{{~/facet}}
           
-          <div class="webkite-facet-values webkite-providence">
-            {{~#facet name="Region"~}}
-              {{~#if filterable~}}
-                <a href="#" class="webkite-add-filter webkite-region" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
-              {{~else~}}
-                <span class="webkite-region">{{~displayValue}}</span>
-              {{~/if~}}          
-            {{~/facet}}
-  
-            {{~#facet name="State"}}
-              {{~#if filterable~}}
-                <a href="#" class="webkite-add-filter webkite-state" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
-              {{~else~}}
-                <span class="webkite-state">{{~displayValue}}</span>
-              {{~/if~}}          
-            {{~/facet}}
-  
-            {{~#facet name="Country"}}
-              {{~#if filterable~}}
-                <a href="#" class="webkite-add-filter webkite-country" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
-              {{~else~}}
-                <span class="webkite-country">{{~displayValue}}</span>
-              {{~/if~}}          
-            {{~/facet~}}
-          </div>
+          {{#any (find facets name="Region") (find facets name="State") (find facets name="Country")}}
+            <div class="webkite-facet-values webkite-providence">
+              {{~#facet name="Region"~}}
+                {{~#if filterable~}}
+                  <a href="#" class="webkite-add-filter webkite-region" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
+                {{~else~}}
+                  <span class="webkite-region">{{~displayValue}}</span>
+                {{~/if~}}          
+              {{~/facet}}
+    
+              {{~#facet name="State"}}
+                {{~#if filterable~}}
+                  <a href="#" class="webkite-add-filter webkite-state" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
+                {{~else~}}
+                  <span class="webkite-state">{{~displayValue}}</span>
+                {{~/if~}}          
+              {{~/facet}}
+    
+              {{~#facet name="Country"}}
+                {{~#if filterable~}}
+                  <a href="#" class="webkite-add-filter webkite-country" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
+                {{~else~}}
+                  <span class="webkite-country">{{~displayValue}}</span>
+                {{~/if~}}          
+              {{~/facet~}}
+            </div>
+          {{/any}}
           
           <div class="webkite-block-group webkite-prices until-md">
             <div class="webkite-block webkite-block-fifty webkite-glass">

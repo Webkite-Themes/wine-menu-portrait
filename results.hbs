@@ -16,32 +16,35 @@
           {{#facet name="Image URL"}}<div class="webkite-image-block"><div class="webkite-image-wrapper"><img src="{{displayValue}}"/></div></div>{{/facet~}}
           
           <div class="webkite-result-body">          
-            <h2 class="webkite-headline">
-              {{~#facet name="Winery"}}
-                {{~#if filterable~}}
-                  <a href="#" class="webkite-add-filter webkite-winery"  data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
-                {{~else~}}
-                  <span class="webkite-winery">{{displayValue}}</span>
-                {{~/if}}
-              {{~/facet}}
-              {{#facet name="Wine Name"}}<span class="webkite-wine-name">{{displayValue}}</span>{{/facet~}}
-            </h2>
-            
-            <div class="webkite-subheadline">
-              {{~#facet name="Vintage"}}<span class="webkite-vintage">{{displayValue}}</span>{{/facet}}
-              {{~#facet name="Varietal"~}}
-                <span class="webkite-varietal">
-                  {{~#if filterable}}
-                    {{~#each values~}}
-                      <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
-                      {{~#unless @last}}/{{/unless~}}
-                    {{~/each}}
-                  {{~else}}
-                    {{~#each values}}{{this}}{{#unless @last}}/{{/unless}}{{/each}}
-                  {{~/if~}}
-                </span>
-              {{~/facet~}}
-            </div>
+            {{#any (find facets name="Winery") (find facets name="Wine Name")}}
+              <h2 class="webkite-headline">
+                {{~#facet name="Winery"}}
+                  {{~#if filterable~}}
+                    <a href="#" class="webkite-add-filter webkite-winery"  data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>
+                  {{~else~}}
+                    <span class="webkite-winery">{{displayValue}}</span>
+                  {{~/if}}
+                {{~/facet}}
+                {{#facet name="Wine Name"}}<span class="webkite-wine-name">{{displayValue}}</span>{{/facet~}}
+              </h2>
+            {{/any}}
+            {{#any (find facets name="Vintage") (find facets name="Varietal")}}
+              <div class="webkite-subheadline">
+                {{~#facet name="Vintage"}}<span class="webkite-vintage">{{displayValue}}</span>{{/facet}}
+                {{~#facet name="Varietal"~}}
+                  <span class="webkite-varietal">
+                    {{~#if filterable}}
+                      {{~#each values~}}
+                        <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                        {{~#unless @last}}/{{/unless~}}
+                      {{~/each}}
+                    {{~else}}
+                      {{~#each values}}{{this}}{{#unless @last}}/{{/unless}}{{/each}}
+                    {{~/if~}}
+                  </span>
+                {{~/facet~}}
+              </div>
+            {{/any}}
                                 
             <div class="webkite-block-group webkite-prices">
               <div class="webkite-block webkite-block-fifty webkite-glass">
@@ -60,9 +63,11 @@
               </div>
             </div><!-- block-group -->
             
-            <div class="webkite-result-foot">
-              <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item more-button" data-toggle="modal" data-speed="100ms">more</a>
-            </div>
+            {{#any (find facets name="Tasting Notes") (find facets name="Region") (find facets name="State") (find facets name="Country")}}
+              <div class="webkite-result-foot">
+                <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item more-button" data-toggle="modal" data-speed="100ms">more</a>
+              </div>
+            {{/any }}
           </div>
         </section>
       </div>
